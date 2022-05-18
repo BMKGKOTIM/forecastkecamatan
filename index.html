@@ -1,0 +1,2993 @@
+<html>
+
+<head>
+<script src="https://kit.fontawesome.com/4540a1c552.js" crossorigin="anonymous"></script>
+<link rel="ico" href="https://www.bmkg.go.id/asset/img/logo/logo-bmkg.svg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>FORM FORECAST KECAMATAN</title>
+</head>
+<script type="text/javascript">
+  function alert1(){
+    return"are u sure?";
+  }
+</script>
+
+<body onbeforeunload="return alert1()">
+    <div class="container">
+	<div class="tabs">
+		<input class="tablinks" onclick="OnchangeTab(event, 'Forms')" type="radio" id="radio-1" name="tabs" checked />
+		<label class="tablinks" for="radio-1">Form</label>
+		<input  class="tablinks" onclick="OnchangeTab(event, 'Views')" type="radio" id="radio-2" name="tabs" />
+		<label class="tablinks" for="radio-2">Tampilan</label>
+		<input   type="radio" id="radio-3" name="tabs" />
+		<label   class="tablinks" for="radio-3">Download</label>
+		<span class="glider"></span>
+	</div>
+</div>
+    <div id="Forms" class="tabviews" >
+	<table class="table table-bordered border-dark" style="width: auto;;text-align: center;font-size: 1.1rem;margin:5% auto auto auto" border="1" cellpadding="0" cellspacing="0">
+    <thead class="table table-dark">
+             <tr >
+            <th   rowspan="2">LOKASI</th>
+            <th   colspan="5">CUACA</th>
+
+        </tr>
+        <tr>
+        <td>PAGI</td>
+        <td>SIANG</td>
+        <td>MALAM</td>
+        <td >DINI HARI</td>
+        </tr>
+      </thead>
+
+        <tr>
+
+            <td style="height: 80px;">ANTANG KALANG</td>
+            <td>
+              <form id="myForm" >
+            <select oninput="cacheInput(this)" onchange="cuaca('pagi1',this)" name="ak" id="">
+                <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+            </select>
+              </form>
+
+
+            </td>
+            <td>
+              <form  id="myForm">
+				<select onchange="cuaca('siang1',this)"  oninput="cacheInput(this)" name="as" id="">
+					<option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+            </select></form>
+            </td>
+            <td>
+                <select onchange="cuaca('malam1',this)" id="">
+                    <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                </select>
+            </td>
+            <td>
+                <select onchange="cuaca('dinihari1',this)" id="">
+                    <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                </select>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td style="height: 80px;">BAAMANG</td>
+            <td>
+                <select onchange="cuaca('pagi2',this)" name="" id="">
+                <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+            </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang2',this)" name="" id="">
+                <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+            </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam2',this)" name="" id="">
+                <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+            </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari2',this)" name="" id="">
+                <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+            </select>
+                </td>
+
+        </tr>
+        <tr>
+            <td style="height: 80px;">BUKIT SANTUAI</td>
+
+                <td>
+                    <select onchange="cuaca('pagi3',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang3',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam3',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+				<td>
+                    <select onchange="cuaca('dinihari3',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+
+
+        </tr>
+        <tr>
+            <td>CEMPAGA</td>
+            <td>
+                <select onchange="cuaca('pagi4',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang4',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam4',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari4',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+
+        </tr>
+        <tr>
+            <td>CEMPAGA HULU</td>
+            <td>
+                <select onchange="cuaca('pagi5',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang5',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam5',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari5',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">KOTA BESI</td>
+            <td>
+                <select onchange="cuaca('pagi6',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang6',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam6',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari6',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td>MENTAWA BARU KETAPANG</td>
+            <td>
+                <select onchange="cuaca('pagi7',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang7',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam7',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari7',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">MENTAYA HILIR SELATAN</td>
+            <td>
+                <select onchange="cuaca('pagi8',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang8',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam8',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari8',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">MENTAYA HILIR UTARA</td>
+            <td>
+                <select onchange="cuaca('pagi9',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang9',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam9',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari9',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">MENTAYA HULU</td>
+            <td>
+                <select onchange="cuaca('pagi10',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang10',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam10',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari10',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">PARENGGEAN</td>
+            <td>
+                <select onchange="cuaca('pagi11',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang11',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam11',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari11',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">PULAU HANAUT</td>
+            <td>
+                <select onchange="cuaca('pagi12',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang12',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam12',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari12',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">SERANAU</td>
+            <td>
+                <select onchange="cuaca('pagi13',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang13',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam13',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari13',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">TELAGA ANTANG</td>
+            <td>
+                <select onchange="cuaca('pagi14',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang14',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam14',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari14',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">TELAWANG</td>
+            <td>
+                <select onchange="cuaca('pagi15',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang15',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam15',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari15',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">TELUK SAMPIT</td>
+            <td>
+                <select onchange="cuaca('pagi16',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang16',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam16',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari16',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 80px;">TUALAN HULU</td>
+            <td>
+                <select onchange="cuaca('pagi17',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('siang17',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('malam17',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+                <td>
+                    <select onchange="cuaca('dinihari17',this)" name="" id="">
+                        <option value="">--</option>
+                <option value="assets/img/CERAH.png">CERAH</option>
+                <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+                    </select>
+                </td>
+
+        </tr>
+
+
+    </table>
+    <table class="table border-dark mt-4 table-bordered" style="text-align:center;width:auto;margin:0px auto" border="1" cellpadding="0" cellspacing="0" >
+      <thead class="table-dark">
+        <tr>
+         <td  colspan="2">CUACA</td>
+         <td  rowspan="2">FOD &nbsp;&nbsp;&nbsp;<a href="edit.php"><button class="btn btn-light">Edit Name</button></a></td>
+        </tr>
+        <tr>
+            <td >SELATAN KALTENG</td>
+            <td >LAUT JAWA	</td>
+        </tr>
+          </thead>
+        <tr>
+            <td>
+              <select onchange=" cuaca('selatankalteng',this)" name="" id="">
+                  <option value="">--</option>
+                  <option value="assets/img/CERAH.png">CERAH</option>
+                  <option value="assets/img/BERAWAN.png">BERAWAN</option>
+                  <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+                  <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+                  <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+              </select>
+         </td>
+         <td>
+            <select onchange=" cuaca('lautjawa',this)" name="" id="">
+            <option value="">--</option>
+            <option value="assets/img/CERAH.png">CERAH</option>
+            <option value="assets/img/BERAWAN.png">BERAWAN</option>
+            <option value="assets/img/HUJANRINGAN.png">HUJAN RINGAN</option>
+            <option value="assets/img/HUJANSEDANG.png">HUJAN SEDANG</option>
+            <option value="assets/img/HUJANLEBAT.png">HUJAN LEBAT</option>
+        </select>
+              <td>
+            <select onchange="onChangeFod(this)" id="SelectFod">
+            <option>--</option>
+                  <?php
+                while($user_data = mysqli_fetch_array($result)){
+                echo"<option>".$user_data['nama']."</option>";
+            }
+             ?>
+            </select>
+
+
+            </td>
+         </td>
+        </tr>
+
+    </table>
+</div>
+	<br>
+	<br>
+	<br>
+
+
+<div class="tabviews" id="Views" align=center x:publishsource="Excel">
+<div id="view">
+  <section style="position:absolute;right:1%;border:solid #8cd3ff 2px;font-size:1.6rem;padding:10px">
+    Untuk hasil gambar yang bagus, silahkan<br> gunakan zoom 100% sebagai default <br> dan download gambar dalam mode fullscreen.<br><br>hasil download akan masuk<br> ke folder download
+  </section>
+  <p style="color:#f2f6fb;">e</p>
+  <table border=0 cellpadding=0 cellspacing=0 width=1161 class=xl6553512751
+   style=;border-collapse:collapse;table-layout:fixed;width:874pt'>
+   <col class=xl6553512751 width=328 style='mso-width-source:userset;mso-width-alt:
+   11995;width:246pt'>
+   <col class=xl6553512751 width=6 style='mso-width-source:userset;mso-width-alt:
+   219;width:5pt'>
+   <col class=xl6553512751 width=63 style='mso-width-source:userset;mso-width-alt:
+   2304;width:47pt'>
+   <col class=xl6553512751 width=6 style='mso-width-source:userset;mso-width-alt:
+   219;width:5pt'>
+   <col class=xl6553512751 width=68 style='mso-width-source:userset;mso-width-alt:
+   2486;width:51pt'>
+   <col class=xl6553512751 width=6 style='mso-width-source:userset;mso-width-alt:
+   219;width:5pt'>
+   <col class=xl6553512751 width=68 style='mso-width-source:userset;mso-width-alt:
+   2486;width:51pt'>
+   <col class=xl6553512751 width=6 style='mso-width-source:userset;mso-width-alt:
+   219;width:5pt'>
+   <col class=xl6553512751 width=68 style='mso-width-source:userset;mso-width-alt:
+   2486;width:51pt'>
+   <col class=xl6553512751 width=6 style='mso-width-source:userset;mso-width-alt:
+   219;width:5pt'>
+   <col class=xl6553512751 width=111 style='mso-width-source:userset;mso-width-alt:
+   4059;width:83pt'>
+   <col class=xl6553512751 width=6 style='mso-width-source:userset;mso-width-alt:
+   219;width:5pt'>
+   <col class=xl6553512751 width=181 style='mso-width-source:userset;mso-width-alt:
+   6619;width:136pt'>
+   <col class=xl6553512751 width=6 style='mso-width-source:userset;mso-width-alt:
+   219;width:5pt'>
+   <col class=xl6553512751 width=161 style='mso-width-source:userset;mso-width-alt:
+   5888;width:121pt'>
+   <col class=xl6553512751 width=71 style='mso-width-source:userset;mso-width-alt:
+   2596;width:53pt'>
+   <tr height=22 style='mso-height-source:userset;height:16.5pt'>
+    <td height=22 width=328 style='height:16.5pt;width:246pt' align=left
+    valign=top>
+   <span style='mso-ignore:vglayout;
+    position:relative;z-index:1'><span style='position:absolute;left:-1px;
+;width:1163px;height:245px'><img width=1163 height=245
+    src="assets/img/XL_image008.png" ><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=22 class=xl6553512751 width=328 style='height:16.5pt;width:246pt'></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6553512751 width=6 style='width:5pt'></td>
+    <td class=xl6553512751 width=63 style='width:47pt'></td>
+    <td class=xl6553512751 width=6 style='width:5pt'></td>
+    <td class=xl6553512751 width=68 style='width:51pt'></td>
+    <td class=xl6553512751 width=6 style='width:5pt'></td>
+    <td class=xl6553512751 width=68 style='width:51pt'></td>
+    <td class=xl6553512751 width=6 style='width:5pt'></td>
+    <td class=xl6553512751 width=68 style='width:51pt'></td>
+    <td class=xl6553512751 width=6 style='width:5pt'></td>
+    <td class=xl6553512751 width=111 style='width:83pt'></td>
+    <td class=xl6553512751 width=6 style='width:5pt'></td>
+    <td class=xl6553512751 width=181 style='width:136pt'></td>
+    <td class=xl6553512751 width=6 style='width:5pt'></td>
+    <td class=xl6553512751 width=161 style='width:121pt'></td>
+    <td class=xl6553512751 width=71 style='width:53pt'></td>
+   </tr>
+   <tr height=20 style='height:15.0pt'>
+    <td height=20 class=xl6553512751 style='height:15.0pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=26 style='mso-height-source:userset;height:20.1pt'>
+    <td colspan=16 rowspan=2 height=52 class=xl9712751 style='height:40.2pt'></td>
+   </tr>
+   <tr height=26 style='mso-height-source:userset;height:20.1pt'>
+   </tr>
+   <tr height=26 style='mso-height-source:userset;height:19.5pt'>
+    <td colspan=16 rowspan=2 height=50 class=xl9812751 style='height:37.5pt'></td>
+   </tr>
+   <tr height=24 style='mso-height-source:userset;height:18.0pt'>
+   </tr>
+   <tr height=20 style='height:15.0pt'>
+    <td height=20 class=xl6553512751 style='height:15.0pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=28 style='height:21.0pt'>
+    <td colspan=16 height=28 class=xl10012751 style='height:21.0pt'><span
+    style='mso-spacerun:yes'> </span>PRAKIRAAN CUACA KOTAWARINGIN TIMUR</td>
+   </tr>
+   <tr height=28 style='height:21.0pt'>
+    <td colspan=16 height=28 class=xl10012751 style='height:21.0pt'><span
+    style='mso-spacerun:yes'> </span>Berlaku mulai <p style="display: inline;" id="tgl1"></p>
+  07.00 WIB hingga <p style="display: inline;" id="tgl2"></p> 07.00 WIB</td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:4.5pt'>
+    <td height=6 class=xl6553512751 style='height:4.5pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr class=xl6512751 height=33 style='mso-height-source:userset;height:24.75pt'>
+    <td rowspan=2 height=81 class=xl8312751 style='height:60.75pt'>LOKASI</td>
+    <td class=xl6312751></td>
+    <td colspan=7 class=xl9912751>CUACA</td>
+    <td class=xl6312751></td>
+    <td rowspan=2 class=xl8312751>SUHU (&#7506;C)</td>
+    <td class=xl6312751></td>
+    <td rowspan=2 class=xl8412751 width=181 style='width:136pt'>KELEMBABAN (%)</td>
+    <td class=xl6312751></td>
+    <td colspan=2 rowspan=2 class=xl8412751 width=232 style='width:174pt'>ARAH
+    (dari) dan<br><span style='mso-spacerun:yes'>
+    </span>KEC. ANGIN (km/jam)</td>
+   </tr>
+   <tr class=xl6512751 height=48 style='mso-height-source:userset;height:36.0pt'>
+    <td height=48 class=xl6312751 style='height:36.0pt'></td>
+    <td class=xl8312751>PAGI</td>
+    <td class=xl8312751></td>
+    <td class=xl8312751>SIANG</td>
+    <td class=xl8312751></td>
+    <td class=xl8312751>MALAM</td>
+    <td class=xl8312751></td>
+    <td class=xl8412751 width=68 style='width:51pt'>DINI HARI</td>
+    <td class=xl6312751></td>
+    <td class=xl6312751></td>
+    <td class=xl6312751></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl6612751 style='height:5.1pt'></td>
+    <td class=xl6612751></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751></td>
+    <td class=xl6412751 align=right></td>
+    <td class=xl6612751></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751></td>
+    <td class=xl6412751></td>
+    <td class=xl6412751></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl6712751 style='height:5.1pt'></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6712751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8512751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;ANTANG KALANG</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+  <span style='mso-ignore:vglayout;
+    position:absolute;z-index:62;margin-left:4px;margin-top:2px;width:137px;
+    height:40px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=40></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+      <td></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img   name="pagi1"  src="" ></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img  name="siang1"  src="" ></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+    <![if !vml]>
+    <span style='mso-ignore:vglayout;
+    position:absolute;z-index:4;margin-left:3px;margin-top:2px;width:69px;
+    height:40px'>	</span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam1" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:5;margin-left:4px;margin-top:2px;width:67px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari1" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input style="width:100px" class=xl8212751 value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input style="width:180px" value="" class=xl8212751 type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input style="width:140px" value="" class=xl8212751 type="text"></td>
+    <td class=xl8212751><input style="width:60px" class=xl8212751 value="" type="text"></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl6812751 style='height:5.1pt'></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6812751></td>
+    <td class=xl6612751></td>
+    <td class=xl6812751></td>
+    <td class=xl6612751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8612751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;BAAMANG</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:6;margin-left:4px;margin-top:2px;width:137px;
+    height:41px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=41></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi2" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751><img src="{{ $fc->bmsiang }}" name="siang2" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top><![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:8;margin-left:3px;margin-top:2px;width:69px;
+    height:41px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam2" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:9;margin-left:4px;margin-top:2px;width:67px;
+    height:41px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari2" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl6312751><input class=xl6312751 style="width:180px;border: none;" value="" type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl6312751><input class=xl6312751 style="width:60px;border: none;" value="" type="text"></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl6812751 style='height:5.1pt'></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6712751></td>
+    <td class=xl6612751></td>
+    <td class=xl6812751></td>
+    <td class=xl6612751></td>
+    <td class=xl6812751></td>
+    <td class=xl6612751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8712751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;BUKIT SANTUAI</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:11;margin-left:4px;margin-top:2px;width:137px;
+    height:41px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=41></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi3" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img src="" name="siang3" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:13;margin-left:3px;margin-top:2px;width:69px;
+    height:41px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam3" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:14;margin-left:4px;margin-top:2px;width:67px;
+    height:41px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari3" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input class=xl8212751 style="width:180px;border: none;" value=""   type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:140px;border: none;" value=""  type="text"></td>
+    <td class=xl8212751><input class=xl8212751 style="width:60px;border: none;" value=""  type="text"></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8612751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;CEMPAGA</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:10;margin-left:4px;margin-top:2px;width:137px;
+    height:40px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=40></td>
+      <td align=left valign=top></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi4" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751><img src="" name="siang4" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:15;margin-left:3px;margin-top:2px;width:69px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam4" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:16;margin-left:4px;margin-top:2px;width:67px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari4" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl6312751><input class=xl6312751 style="width:180px;border: none;" value=""  type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:140px;border: none;"  value=""type="text"></td>
+    <td class=xl6312751><input class=xl6312751 style="width:60px;border: none;" value="" type="text"></td>
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8712751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;CEMPAGA HULU</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:18;margin-left:4px;margin-top:2px;width:137px;
+    height:40px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=40></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi5" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img src="" name="siang5" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:20;margin-left:3px;margin-top:2px;width:69px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam5" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:21;margin-left:4px;margin-top:2px;width:67px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari5" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input class=xl8212751 style="width:180px;border: none;" value=""  type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl8212751><input class=xl8212751 style="width:60px;border: none;" value="" type="text"></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8612751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;KOTA BESI</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:25;margin-left:4px;margin-top:3px;width:137px;
+    height:39px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=39></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi6" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751><img src="" name="siang6" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:23;margin-left:1px;margin-top:3px;width:68px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam6" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:22;margin-left:4px;margin-top:1px;width:67px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari6" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl6312751><input class=xl6312751 style="width:180px;border: none;" value=""  type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl6312751><input class=xl6312751 style="width:60px;border: none;" value="" type="text"></td>
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8712751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;MENTAWA BARU KETAPANG</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:26;margin-left:4px;margin-top:3px;width:137px;
+    height:39px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=39></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi7" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img src="" name="siang7" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:28;margin-left:3px;margin-top:3px;width:69px;
+    height:39px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam7" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:29;margin-left:4px;margin-top:3px;width:67px;
+    height:39px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari7" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input class=xl8212751 style="width:180px;border: none;" value="" type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl8212751><input class=xl8212751 style="width:60px;border: none;" value="" type="text"></td>
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8612751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;MENTAYA HILIR SELATAN</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:33;margin-left:4px;margin-top:2px;width:137px;
+    height:40px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=40></td>
+      <td align=left valign=top></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi8" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751><img src="" name="siang8" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top
+
+    <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:31;margin-left:3px;margin-top:2px;width:69px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam8" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:30;margin-left:4px;margin-top:2px;width:67px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari8" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl6312751><input class=xl6312751 style="width:180px;border: none;" value="" type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl6312751><input class=xl6312751 style="width:60px;border: none;" value="" type="text"></td>
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8712751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;MENTAYA HILIR UTARA</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:34;margin-left:4px;margin-top:3px;width:137px;
+    height:39px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=39></td>
+      <td align=left valign=top></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi9" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img src="" name="siang9" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:36;margin-left:3px;margin-top:3px;width:69px;
+    height:39px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam9" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top
+
+    <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:37;margin-left:4px;margin-top:3px;width:67px;
+    height:39px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari9" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input class=xl8212751 style="width:180px;border: none;" value=""  type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:140px;border: none;" value="" "type="text"></td>
+    <td class=xl8212751><input class=xl8212751 style="width:60px;border: none;" value="" type="text"></td>
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=36 style='mso-height-source:userset;height:27.0pt'>
+    <td height=36 class=xl8612751 style='height:27.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;MENTAYA HULU</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top
+
+    <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:73;margin-left:4px;margin-top:2px;width:137px;
+    height:40px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=68></td>
+      <td width=1></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=40></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=36 class=xl6612751 width=63 style='height:27.0pt;width:47pt'><img src="" name="pagi10" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751><img src="" name="siang10" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:75;margin-left:3px;margin-top:2px;width:69px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=36 class=xl6612751 width=68 style='height:27.0pt;width:51pt'><img src="" name="malam10" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:76;margin-left:4px;margin-top:2px;width:68px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=36 class=xl6612751 width=68 style='height:27.0pt;width:51pt'><img src="" name="dinihari10" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:100px;border: none;"value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl6312751><input class=xl6312751 style="width:180px;border: none;" value=""  type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl6312751><input class=xl6312751 style="width:60px;border: none;" value="" type="text"></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8712751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;PARENGGEAN</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:38;margin-left:4px;margin-top:2px;width:137px;
+    height:41px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=41></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi11" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img src="" name="siang11" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:40;margin-left:3px;margin-top:2px;width:69px;
+    height:41px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam11" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:41;margin-left:4px;margin-top:2px;width:67px;
+    height:41px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari11" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input class=xl8212751 style="width:180px;border: none;" value="" type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl8212751><input class=xl8212751 style="width:60px;border: none;" value="" type="text"></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8612751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;PULAU HANAUT</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:42;margin-left:4px;margin-top:2px;width:137px;
+    height:41px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=41></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi12" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751><img src="" name="siang12" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:44;margin-left:3px;margin-top:2px;width:69px;
+    height:41px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam12" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:45;margin-left:4px;margin-top:2px;width:67px;
+    height:41px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari12" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+
+
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:100px;border: none;"value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl6312751><input class=xl6312751 style="width:180px;border: none;" value="" type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl6312751><input class=xl6312751 style="width:60px;border: none;" value="" type="text"></td>
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8712751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;SERANAU</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:46;margin-left:4px;margin-top:2px;width:139px;
+    height:40px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=4></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=40></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi13" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img src="" name="siang13" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:48;margin-left:3px;margin-top:2px;width:69px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam13" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:49;margin-left:4px;margin-top:2px;width:67px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari13" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+
+
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input class=xl8212751 style="width:180px;border: none;" value="" type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl8212751><input class=xl8212751 style="width:60px;border: none;" value="" type="text"></td>
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr class=xl9312751 height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl9412751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;TELAGA ANTANG</td>
+    <td class=xl9512751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:50;margin-left:6px;margin-top:2px;width:135px;
+    height:42px'><span style='mso-ignore:vglayout;
+    position:absolute;z-index:46;margin-left:4px;margin-top:2px;width:139px;
+    height:40px'>
+    </span></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl9612751 width=63 style='height:30.0pt;width:47pt'></td>
+
+      <td height=40 class=xl9612751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi14" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl9512751></td>
+    <td class=xl9612751><img src="" name="siang14" alt=""></td>
+    <td class=xl9512751></td>
+    <td align=left valign=top>
+
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:52;margin-left:4px;margin-top:2px;width:68px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl9612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam14" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl9512751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:53;margin-left:4px;margin-top:2px;width:68px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl9612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari14" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl6312751><input class=xl6312751 style="width:180px;border: none;" value="" type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:140px;border: none;" value="" type="text"></td>
+    <td class=xl6312751><input class=xl6312751 style="width:60px;border: none;" value="" type="text"></td>
+
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:4.5pt'>
+    <td height=6 class=xl8812751 style='height:4.5pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8712751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'></span>&nbsp;&nbsp;&nbsp;&nbsp;TELAWANG</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:54;margin-left:4px;margin-top:3px;width:137px;
+    height:39px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=39></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi15" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img src="" name="siang15" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:56;margin-left:3px;margin-top:3px;width:69px;
+    height:39px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam15" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:57;margin-left:4px;margin-top:3px;width:67px;
+    height:39px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari15" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input class=xl8212751 style="width:180px;border: none;" value="" type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:140px;border: none;"type="text" value=""></td>
+    <td class=xl8212751><input class=xl8212751 style="width:60px;border: none;" type="text" value=""></td>
+
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8812751 style='height:30.0pt;border-top:none'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;TELUK SAMPIT</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:58;margin-left:4px;margin-top:3px;width:137px;
+    height:39px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=39></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi16" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6612751><img src="" name="siang16" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:60;margin-left:3px;margin-top:3px;width:69px;
+    height:39px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam16" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:61;margin-left:4px;margin-top:3px;width:67px;
+    height:39px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl6612751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari16" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:100px;border: none;" value="" type="text"></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl6312751><input class=xl6312751 style="width:180px;border: none;" value=""  type="text"></td>
+    <td class=xl6412751></td>
+    <td class=xl6312751><input class=xl6312751 style="width:140px;border: none;"type="text" value=""></td>
+    <td class=xl6312751><input class=xl6312751 style="width:60px;border: none;" type="text" value=""></td>
+
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl8812751 style='height:5.1pt;border-top:none'></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6712751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6412751></td>
+    <td class=xl6812751></td>
+    <td class=xl6812751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl8912751 style='height:30.0pt;border-top:none'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;TUALAN HULU</td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:63;margin-left:4px;margin-top:2px;width:137px;
+    height:40px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=67></td>
+      <td width=2></td>
+      <td width=68></td>
+     </tr>
+     <tr>
+      <td height=40></td>
+      <td align=left valign=top></td>
+      <td></td>
+      <td align=left valign=top></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=63 style='height:30.0pt;width:47pt'><img src="" name="pagi17" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td class=xl8112751><img src="" name="siang17" alt=""></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:65;margin-left:3px;margin-top:2px;width:69px;
+    height:40px'></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="malam17" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6412751></td>
+    <td align=left valign=top>
+
+        <span style='mso-ignore:vglayout;
+    position:absolute;z-index:66;margin-left:90px;width:565px;
+    height:142px;margin-top: 50px;'><img  width=500 height=100
+    src="assets/img/XL_image068.png" v:shapes="Picture_x0020_66 TextBox_x0020_78 Picture_x0020_145 Picture_x0020_146 Picture_x0020_147 Picture_x0020_148 Picture_x0020_149"></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=40 class=xl8112751 width=68 style='height:30.0pt;width:51pt'><img src="" name="dinihari17" alt=""></td>
+     </tr>
+    </table>
+    </span></td>
+
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:100px;border: none;" type="text" ></td>
+    <td class=xl6412751><span style='mso-spacerun:yes'></span></td>
+    <td class=xl8212751><input class=xl8212751 style="width:180px;border: none;"  type="text" ></td>
+    <td class=xl6412751></td>
+    <td class=xl8212751><input class=xl8212751 style="width:140px;border: none;"type="text" ></td>
+    <td class=xl8212751><input class=xl8212751 style="width:60px;border: none;" type="text" ></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl7112751 style='height:5.1pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl7212751></td>
+    <td class=xl6553512751></td>
+    <td class=xl7212751></td>
+    <td class=xl6553512751></td>
+    <td class=xl7212751></td>
+    <td class=xl6553512751></td>
+    <td class=xl7212751></td>
+    <td class=xl6553512751></td>
+    <td class=xl7212751></td>
+    <td class=xl6553512751></td>
+    <td class=xl7212751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6812751></td>
+    <td class=xl7212751></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl6553512751 style='height:5.1pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6312751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl7912751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;PAGI<span style='mso-spacerun:yes'>
+    </span>: 07.00 - 13.00 WIB</td>
+    <td class=xl8012751></td>
+    <td class=xl7912751 colspan=7>&nbsp;&nbsp;&nbsp;&nbsp;SIANG<span style='mso-spacerun:yes'>
+    </span>: 13.00 - 19.00 WIB</td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td height=40 class=xl7912751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;MALAM : 19.00 - 01.00 WIB</td>
+    <td class=xl8012751></td>
+    <td class=xl7912751 colspan=7>&nbsp;&nbsp;&nbsp;&nbsp;DINI HARI : 01.00 - 07.00 WIB</td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+    <td class=xl8012751></td>
+   </tr>
+   <tr height=20 style='height:15.0pt'>
+    <td height=20 class=xl6553512751 style='height:15.0pt'></td>
+    <td class=xl6553512751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:69;margin-left:6px;margin-top:1px;width:91px;
+    height:91px'><img width=91 height=91
+    src="assets/img/XL_image070.png" v:shapes="Picture_x0020_80"></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=20 class=xl6553512751 width=63 style='height:15.0pt;width:47pt'></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=28 style='mso-height-source:userset;height:21.0pt'>
+    <td colspan=16 rowspan=2 height=56 class=xl10112751 style='height:42.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRAKIRAAN GELOMBANG</td>
+   </tr>
+   <tr height=28 style='mso-height-source:userset;height:21.0pt'>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl6553512751 style='height:5.1pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=61 style='mso-height-source:userset;height:45.75pt'>
+    <td colspan=3 height=61 class=xl10212751 style='height:45.75pt'>PERAIRAN</td>
+    <td class=xl6553512751></td>
+    <td colspan=5 class=xl10212751>CUACA</td>
+    <td class=xl6553512751></td>
+    <td colspan=3 class=xl10212751>TINGGI GELOMBANG (meter)</td>
+    <td class=xl6553512751></td>
+    <td colspan=2 class=xl10312751 width=232 style='width:174pt'>ARAH (dari)
+    dan<br><span style='mso-spacerun:yes'> </span>KEC.
+    ANGIN (km/jam)</td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl6553512751 style='height:5.1pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl7312751e style='height:5.1pt'></td>
+    <td class=xl7312751e></td>
+    <td class=xl7312751e></td>
+    <td class=xl6553512751></td>
+    <td class=xl7312751d></td>
+    <td class=xl7312751d></td>
+    <td class=xl7312751d></td>
+    <td class=xl7312751d></td>
+    <td class=xl7312751d></td>
+    <td class=xl6553512751></td>
+    <td class=xl7312751e></td>
+    <td class=xl7312751e></td>
+    <td class=xl7312751e></td>
+    <td class=xl6553512751></td>
+    <td class=xl7312751d></td>
+    <td class=xl7312751d></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td colspan=3 height=40 class=xl9012751 style='height:30.0pt'>SELATAN KALTENG</td>
+    <td class=xl6912751></td>
+    <td colspan=5 height=40 width=216 style='height:30.0pt;width:163pt'
+    align=left valign=top>
+
+    <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:70;margin-left:79px;margin-top:2px;width:68px;
+    height:40px'><img src="" name="selatankalteng" alt=""></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td colspan=5 height=40 class=xl10712751 width=216 style='height:30.0pt;
+      width:163pt'></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6912751></td>
+    <td colspan=3 class=xl10912751><input style="width:260px" class=xl8212751  type="text"></td>
+    <td class=xl6912751></td>
+    <td class=xl8212751><input style="width:100px" class=xl8212751  type="text"></td>
+    <td class=xl9012751 style='border-top:none'><input style="width:60px" class=xl8212751  type="text"></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl7412751 style='height:5.1pt'></td>
+    <td class=xl7412751></td>
+    <td class=xl7412751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xl6912751></td>
+    <td class=xlol></td>
+    <td class=xl7512751></td>
+   </tr>
+   <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+    <td colspan=3 height=40 class=xl10612751 style='height:30.0pt'><span
+    style='mso-spacerun:yes'> </span>LAUT JAWA</td>
+    <td class=xl6912751></td>
+    <td colspan=5 height=40 width=216 style='height:30.0pt;width:163pt'
+    align=left valign=top>
+
+    <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:71;margin-left:77px;margin-top:2px;width:69px;
+    height:40px'><img src="" name="lautjawa" alt=""></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td colspan=5 height=40 class=xl10812751 width=216 style='height:30.0pt;
+      width:163pt'></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6912751></td>
+    <td colspan=3 class=xl10912751> <input style="width:260px"  class=xl8212751 type="text"></td>
+    <td class=xl6912751></td>
+    <td class=xl8212751><input style="width:100px" class=xl8212751  type="text"></td>
+    <td class=xl9012751><input style="width:60px" class=xl8212751  type="text"></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl7612751 style='height:5.1pt'></td>
+    <td class=xl7612751></td>
+    <td class=xl7612751></td>
+    <td class=xl6912751></td>
+    <td class=xl7012751></td>
+    <td class=xl7012751></td>
+    <td class=xl7012751></td>
+    <td class=xl7012751></td>
+    <td class=xl7012751></td>
+    <td class=xl6912751></td>
+    <td class=xl7012751 style='border-top:none'></td>
+    <td class=xl7012751 style='border-top:none'></td>
+    <td class=xl7012751 style='border-top:none'></td>
+    <td class=xl6912751></td>
+    <td class=xl7012751></td>
+    <td class=xl7012751 style='border-top:none'></td>
+   </tr>
+   <tr height=20 style='height:15.0pt'>
+    <td height=20 class=xl6553512751 style='height:15.0pt'></td>
+    <td class=xl6553512751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:72;margin-left:50px;margin-top:6px;width:96px;
+    height:87px'><img width=96 height=87
+    src="assets/img/XL_image074.png" v:shapes="Picture_x0020_157"></span><![endif]><span
+    style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=20 class=xl6553512751 width=63 style='height:15.0pt;width:47pt'></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=28 style='mso-height-source:userset;height:21.0pt'>
+    <td colspan=16 rowspan=2 height=56 class=xl10412751 style='height:42.0pt'><span
+    style='mso-spacerun:yes'> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERINGATAN DINI</td>
+   </tr>
+   <tr height=28 style='mso-height-source:userset;height:21.0pt'>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl6553512751 style='height:5.1pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl7312751 style='height:5.1pt'></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+   </tr>
+   <tr height=23 style='mso-height-source:userset;height:17.25pt'>
+       <td colspan=16 rowspan=2 height=46 class=xl10512751 style='height:34.5pt'><input style="width:1000px" class=xl10512751 type="text"></input></td>
+   </tr>
+   <tr height=23 style='mso-height-source:userset;height:17.25pt'>
+   </tr>
+   <tr height=6 style='mso-height-source:userset;height:5.1pt'>
+    <td height=6 class=xl7312751 style='height:5.1pt'></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+    <td class=xl7312751></td>
+   </tr>
+   <tr height=20 style='height:15.0pt'>
+    <td height=20 style='height:15.0pt' align=left valign=top>
+
+    <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:84;margin-left:4px;margin-top:5px;width:353px;
+    height:71px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=172></td>
+      <td width=9></td>
+      <td width=172></td>
+     </tr>
+     <tr>
+      <td height=2></td>
+      <td rowspan=2 align=left valign=top><img width=172 height=70
+      src="assets/img/XL_image080.png" v:shapes="Picture_x0020_83 TextBox_x0020_84"></td>
+     </tr>
+     <tr>
+      <td height=68></td>
+      <td></td>
+      <td rowspan=2 align=left valign=top><img width=172 height=69
+      src="assets/img/XL_image081.png" v:shapes="TextBox_x0020_153 Picture_x0020_87 Straight_x0020_Connector_x0020_154"></td>
+     </tr>
+     <tr>
+      <td height=1></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=20 class=xl6553512751 width=328 style='height:15.0pt;width:246pt'></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td align=left valign=top>
+
+        <![if !vml]><span style='mso-ignore:vglayout;
+    position:absolute;z-index:88;margin-left:24px;margin-top:5px;width:703px;
+    height:72px'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td width=0 height=0></td>
+      <td width=1></td>
+      <td width=2></td>
+      <td width=502></td>
+      <td width=16></td>
+      <td width=182></td>
+     </tr>
+     <tr>
+      <td height=20></td>
+      <td colspan=2></td>
+      <td rowspan=3 align=left valign=top><img width=502 height=72
+      src="assets/img/XL_image089.png" v:shapes="TextBox_x0020_152 Picture_x0020_86 Straight_x0020_Connector_x0020_98 Picture_x0020_2 TextBox_x0020_100 Picture_x0020_67"></td>
+      <td></td>
+      <td rowspan=3 align=left valign=top><img width=182 height=72
+      src="assets/img/XL_image090.png" v:shapes="TextBox_x0020_151 Picture_x0020_85 Straight_x0020_Connector_x0020_158"></td>
+     </tr>
+     <tr>
+      <td height=31></td>
+      <td align=left valign=top></td>
+     </tr>
+     <tr>
+      <td height=21></td>
+     </tr>
+    </table>
+    </span><![endif]><span style='mso-ignore:vglayout2'>
+    <table cellpadding=0 cellspacing=0>
+     <tr>
+      <td height=20 class=xl6553512751 width=68 style='height:15.0pt;width:51pt'></td>
+     </tr>
+    </table>
+    </span></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <tr height=20 style='mso-height-source:userset;height:15.0pt'>
+    <td height=20 class=xl7712751 style='height:15.0pt'></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+   </tr>
+   <tr height=20 style='mso-height-source:userset;height:15.0pt'>
+    <td height=20 class=xl7712751 style='height:15.0pt'></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+    <td class=xl7712751></td>
+   </tr>
+   <tr height=20 style='height:15.0pt'>
+    <td height=20 class=xl6553512751 style='height:15.0pt'></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class="xl7812751" id="SelectFodp"> Forecaster On Duty :</td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+    <td class=xl6553512751></td>
+   </tr>
+   <![if supportMisalignedColumns]>
+   <tr height=0 style='display:none'>
+    <td width=328 style='width:246pt'></td>
+    <td width=6 style='width:5pt'></td>
+    <td width=63 style='width:47pt'></td>
+    <td width=6 style='width:5pt'></td>
+    <td width=68 style='width:51pt'></td>
+    <td width=6 style='width:5pt'></td>
+    <td width=68 style='width:51pt'></td>
+    <td width=6 style='width:5pt'></td>
+    <td width=68 style='width:51pt'></td>
+    <td width=6 style='width:5pt'></td>
+    <td width=111 style='width:83pt'></td>
+    <td width=6 style='width:5pt'></td>
+    <td width=181 style='width:136pt'></td>
+    <td width=6 style='width:5pt'></td>
+    <td width=161 style='width:121pt'></td>
+    <td width=71 style='width:53pt'></td>
+   </tr>
+   <![endif]>
+  </table>
+</div>
+</div>
+
+
+<!----------------------------->
+<!--END OF OUTPUT FROM EXCEL PUBLISH AS WEB PAGE WIZARD-->
+<!----------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/id.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/cachejs.js" charset="utf-8"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+</html>
