@@ -2,6 +2,48 @@
 	{mso-displayed-decimal-separator:"\,";
 	mso-displayed-thousand-separator:"\.";}
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+	#Views{
+
+	width:80%;
+	height: 189%;
+}
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { #Views{
+
+	width:70%;
+	height: 189%;
+} }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	#Views{
+
+	width:69%;
+	height: 189%;
+}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+	#Views{
+
+	width:70%;
+	height: 189%;
+} }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { 
+	#Views{
+
+	width:63%;
+	height: 189%;
+}
+}
 .xl6312751
 	{padding:0px;
 	mso-ignore:padding;
