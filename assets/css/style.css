@@ -1052,4 +1052,5 @@ input[id=radio-3]:checked ~ .glider {
 
 	width:63%;
 	height: 189%;
+	transform:translate(15px);
 }
